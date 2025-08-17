@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video + QR | GitHub Pages</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <h1 class="title">Scan to Watch</h1>
+      <p class="subtitle">This page hosts a video and a matching QR code that links directly to it.</p>
+    </header>
+
+    <section class="grid">
+      <div class="card">
+        <h2 class="card-title">Video Preview</h2>
+        <video id="player" class="video" controls playsinline>
+          <source id="videoSource" src="" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="row gap">
+          <a id="openLink" class="btn" href="#" target="_blank">Open Video</a>
+          <a id="downloadLink" class="btn outline" href="#" download>Download Video</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">QR Code</h2>
+        <div id="qrWrap" class="qr-wrap">
+          <div id="qrcode"></div>
+        </div>
+        <div class="row gap">
+          <button id="downloadQR" class="btn">Download QR PNG</button>
+          <button id="copyUrl" class="btn outline">Copy Video URL</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Made for GitHub Pages • Lightweight, responsive, and offline-friendly.</p>
+    </footer>
+  </main>
+
+  <!-- QRCode.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
